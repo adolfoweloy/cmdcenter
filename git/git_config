@@ -1,0 +1,33 @@
+[user]
+  name = Adolfo Eloy
+  email = adolfo.eloy@gmail.com
+
+[alias]
+  co = checkout
+  ci = commit
+  rb = rebase
+  st = status
+  br = branch
+  df = diff
+  ph = push
+  cob = checkout -b
+  lg = log --pretty=format:'%h - %ar : %s' --graph
+
+[push]
+  default = simple
+
+[merge]
+  keepBackup = false
+  tool = p4merge
+
+[mergetool "p4merge"]
+  cmd = /Users/hastronauta/Applications/p4merge.app/Contents/Resources/launchp4merge "\"$PWD/$BASE\"" "\"$PWD/$REMOTE\"" "\"$PWD/$LOCAL\"" "\"$PWD/$MERGED\""
+  keepTemporaries = false
+  trustExitCode = false
+  keepBackup = false
+
+[diff]
+  tool = p4merge
+
+[difftool "p4merge"]
+  cmd = /Users/hastronauta/Applications/p4merge.app/Contents/Resources/launchp4merge "\"$REMOTE\"" "\"$LOCAL\""
