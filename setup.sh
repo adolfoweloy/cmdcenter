@@ -15,7 +15,6 @@ function check_path {
   fi
 }
 
-
 ## checking for installations before configuring all the environment
 echo "################################################################"
 echo "###           checking for installations                     ###"

@@ -38,7 +38,7 @@ GRADLE_HOME=~/Develop/java_tools/gradle-2.6
 export SPRING_PROFILES_ACTIVE=development
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/hastronauta/.gvm/bin/gvm-init.sh" ]] && source "/Users/hastronauta/.gvm/bin/gvm-init.sh"
+[[ -s "~/.gvm/bin/gvm-init.sh" ]] && source "~/.gvm/bin/gvm-init.sh"
 
 #THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
 JENV_INIT=~/.jenv/bin/jenv-init.sh
