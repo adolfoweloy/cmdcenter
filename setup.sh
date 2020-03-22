@@ -25,21 +25,16 @@ fi
 
 # creates bash_profile as a link to dotfiles
 ALLOW_OVERRIDE="n"
-if [ -f $HOME/.bash_profile ]; then
+if [[ -L $HOME/.bash_profile || -f $HOME/.bash_profile ]]; then
   read -p 'Do you want to override your .bash_profile? [y|n]:' ALLOW_OVERRIDE
 fi
 
 if [[ $ALLOW_OVERRIDE != 'y' ]]; then
-  echo "backup you bash_profile and try next time"
+  echo "backup your bash_profile and try next time"
   exit 0
 fi
 
 ln -sf $CURRENT_DIR/bash_profile $HOME/.bash_profile
-
-# creates add ons links to files on add ons dir
-for n in `ls $CURRENT_DIR/addons`; do
-  cp $CURRENT_DIR/addons/$n $HOME/.$n
-done
 
 echo "run the following command:"
 echo "source $HOME/.bash_profile"
