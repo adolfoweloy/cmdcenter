@@ -10,7 +10,7 @@ MODULES_DIR=$CURRENT_DIR/modules
 
 # loads all additional modular settings
 for n in `ls $MODULES_DIR`; do
-    source $MODULES_DIR/$n
+  source $MODULES_DIR/$n
 done
 
 # sdkman
