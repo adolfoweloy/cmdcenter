@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# terminal commands
+alias ll='ls -laG'
+alias u='cd ..'
+alias uu='cd ../..'
+alias uuu='cd ../../..'
+alias uuuu='cd ../../../..'
+alias uuuuu='cd ../../../../..'
+
+# dev commands
+alias gl='git log --pretty=format:"%h - %an, %ad :%s"'

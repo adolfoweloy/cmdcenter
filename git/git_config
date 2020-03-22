@@ -1,7 +1,3 @@
-[user]
-  name = Adolfo Eloy
-  email = 1496547+adolfoweloy@users.noreply.github.com
-
 [alias]
   co = checkout
   ci = commit
@@ -20,14 +16,3 @@
   keepBackup = false
   tool = p4merge
 
-[mergetool "p4merge"]
-  cmd = /Users/hastronauta/Applications/p4merge.app/Contents/Resources/launchp4merge "\"$PWD/$BASE\"" "\"$PWD/$REMOTE\"" "\"$PWD/$LOCAL\"" "\"$PWD/$MERGED\""
-  keepTemporaries = false
-  trustExitCode = false
-  keepBackup = false
-
-[diff]
-  tool = p4merge
-
-[difftool "p4merge"]
-  cmd = /Users/hastronauta/Applications/p4merge.app/Contents/Resources/launchp4merge "\"$REMOTE\"" "\"$LOCAL\""
