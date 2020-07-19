@@ -34,6 +34,11 @@ if [[ $ALLOW_OVERRIDE != 'y' ]]; then
   exit 0
 fi
 
+# creates an sh file within modules dir to load secret environment variables
+# this file is ignored by git so it wont be published to git when you commit and publish your code (unless you change the default configurations)
+touch $CURRENT_DIR/modules/_env.sh
+echo "#!/bin/bash" > $CURRENT_DIR/modules/_env.sh
+
 ln -sf $CURRENT_DIR/bash_profile $HOME/.bash_profile
 
 echo "run the following command:"
