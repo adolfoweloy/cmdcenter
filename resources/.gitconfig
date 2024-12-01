@@ -1,0 +1,25 @@
+[alias]
+  co = checkout
+  ci = commit
+  rb = rebase
+  st = status
+  br = branch
+  df = diff
+  ph = push
+  cob = checkout -b
+  lg = log --pretty=format:'%h - %ar : %s' --graph
+
+[push]
+  default = simple
+
+[merge]
+  keepBackup = false
+  tool = p4merge
+
+# add the email used for commits here
+#[user]
+#	email =  
+#	name = adolfoweloy
+
+[init]
+	defaultBranch = main
