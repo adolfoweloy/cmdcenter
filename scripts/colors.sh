@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# This script simply prints a pallete of colors using 256 color mode
+# It can be useful if one needs to find the right color e.g. when
+# formatting text in the terminal
+
 colors() {
   # if present first arg sets the number of columns
   # otherwise, the default number of columns will be 2
