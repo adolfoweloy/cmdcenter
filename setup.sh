@@ -38,6 +38,13 @@ if [[ ! -f $HOME/.vimrc ]]; then
   cp resources/.vimrc $HOME/.vimrc
 fi
 
+# copying scripts to ~/.cmdcenter
+mkdir -p $HOME/.cmdcenter/scripts
+cp scripts/colors.sh $HOME/.cmdcenter/scripts
+
+# enabling commands from scripts
+echo "source $HOME/.cmdcenter/scripts/colors.sh" >> ~/.bashrc
+
 # installing sdkman
 which sdk > /dev/null
 if [[ $? != 0 ]]; then
