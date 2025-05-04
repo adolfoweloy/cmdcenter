@@ -17,4 +17,3 @@ colors() {
   echo
 }
 
-colors
