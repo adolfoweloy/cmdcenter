@@ -18,7 +18,9 @@ cd cmdcenter
 I still don't know how to automatically configure my prompt color and formatting but here is what I am currently using from my `.bashrc`:
 
 ```
-PS1='${debian_chroot:+($debian_chroot)}\[\033[38;5;227m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[38;5;122m\]$(__git_ps1 " (%s)")\[\033[00m\] \$     '
+PS1='${debian_chroot:+($debian_chroot)}'
+PS1=$PS1'\[\033[38;5;227m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[38;5;122m\]'
+PS1=$PS1'$(__git_ps1 " (%s)")\[\033[00m\] \$ '
 ```
 
 In some places I am using 256 colors scheme where I am specifying what follows:
