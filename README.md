@@ -2,6 +2,7 @@
 
 This is my dot files setup which I created for bash. Not sure how it will work with zsh or other shell.
 I am using it for my own purposes but if someone reading this is interested to fork I would be keen to have a look and maybe improve cmdcenter.
+.
 
 # setup
 
