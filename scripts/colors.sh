@@ -6,7 +6,7 @@
 
 colors() {
   # if present first arg sets the number of columns
-  # otherwise, the default number of columns will be 2
+  # otherwise, the default number of columns will be 5
   columns=${1:-"5"}
 
   # print out the color palette
