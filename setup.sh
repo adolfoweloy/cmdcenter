@@ -45,6 +45,9 @@ cp scripts/colors.sh $HOME/.cmdcenter/scripts
 # enabling commands from scripts
 echo "source $HOME/.cmdcenter/scripts/colors.sh" >> ~/.bashrc
 
+# customising PS1
+cat resources/ps1.sh >> ~/.bashrc
+
 # installing sdkman
 which sdk > /dev/null
 if [[ $? != 0 ]]; then
