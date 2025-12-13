@@ -38,6 +38,18 @@ if [[ ! -f $HOME/.vimrc ]]; then
   cp resources/.vimrc $HOME/.vimrc
 fi
 
+# check for tmux
+which tmux > /dev/null
+if [[ $? != 0 ]]; then
+  echo "Installing tmux"
+  sudo apt-get -ys install tmux
+fi
+
+if [[ ! -f $HOME/.tmux.conf ]]; then
+  echo "Loading tmux config"
+  cp resources/.tmux.conf $HOME/.tmux.conf
+fi
+
 # copying scripts to ~/.cmdcenter
 mkdir -p $HOME/.cmdcenter/scripts
 cp scripts/colors.sh $HOME/.cmdcenter/scripts
@@ -49,12 +61,11 @@ echo "source $HOME/.cmdcenter/scripts/colors.sh" >> ~/.bashrc
 cat resources/ps1.sh >> ~/.bashrc
 
 # installing sdkman
-which sdk > /dev/null
-if [[ $? != 0 ]]; then
+if [[ ! -d $HOME/.sdkman ]]; then
   echo "Installing sdkman"
   curl -s "https://get.sdkman.io" | bash
 fi
 
-echo "Don't forget to download your IDE keymap file and copy it to the following dir once IDEA is installed"
-echo "$HOME/.config/JetBrains/<version>/keymaps/"
+#echo "Don't forget to download your IDE keymap file and copy it to the following dir once IDEA is installed"
+#echo "$HOME/.config/JetBrains/<version>/keymaps/"
 
