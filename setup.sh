@@ -20,7 +20,7 @@ if [[ $? != 0 ]]; then
 fi
 
 # install Plug plugin manager for vim
-if [[ ! -f $HOME/.vim/autoload/plugin.vim ]]; then 
+if [[ ! -f $HOME/.vim/autoload/plug.vim ]]; then 
   echo "Installing Plug vim plugin"
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
